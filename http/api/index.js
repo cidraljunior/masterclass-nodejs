@@ -31,7 +31,9 @@ http.createServer((req, res) => {
 
     if(del) {
         data.urls = data.urls.filter(item => String(item.url) !== String(url))
+        console.log("ok")
         return writeFile((message) => res.end(message))
+        
     }
     
     data.urls.push({name, url})
